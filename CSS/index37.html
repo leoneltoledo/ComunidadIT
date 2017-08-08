@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Elementos</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a {
+                background-color: #C2FAFE;
+                border: 2px solid #0B9EA8;
+                padding: 10px;
+                text-decoration: none;
+                color: #0B9EA8;             
+            }
+            a:hover {
+                text-decoration: underline;
+                background-color: #0B9EA8;
+                color: white;
+            }
+            a:active {
+                background-color: #046A71;
+            }
+            li {
+                padding: 20px;
+                background-color: #eee;
+                border: 1px solid black;
+            }
+            li:hover {
+                background-color: #ccc;
+                font-size: 120%;
+            }
+            li:last-child {
+                border: none;
+            }
+            li:first-child {
+                font-weight: bold;
+            }
+            li:active {
+                text-decoration: line-through;
+            }
+            nav {
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pseudo Elementos</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">News</a>
+        </nav>
+        <ul>
+            <li>Neque porro quisquam est qui dolorem</li>
+            <li>Ipsum quia dolor sit amet, consectetur, adipisci velit...</li>
+            <li>On the other hand, we denounce with righteous indignation</li>
+            <li>Temporibus autem quibusdam et aut officiis debitis</li>
+            <li>Itaque earum rerum hic tenetur a sapiente delectus</li>
+        </ul>
+    </body>
+</html>

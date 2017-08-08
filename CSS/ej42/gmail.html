@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario Gmail</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            form {
+                background-color: #EBF0F2;
+                width: 300px;
+                padding: 15px;
+            }
+            button {
+                color: white;
+                background-color: #338EE4;
+                border: 1px solid #238CB6;
+                width: 100px;
+                height: 45px;
+                font-size: 16px;
+                font-weight: bolder;
+                position: relative;
+                left: 175px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#">
+                <strong>Name</strong>
+                <br />
+                <input type="text" name="firstName" placeholder="First" size="15"/>
+                <input type="text" name="lastName" placeholder="Last" size="15"/>
+                <br />
+                <br />
+                <strong>Choose your username</strong>
+                <br />
+                <input type="text" name="userName" placeholder="                                                    @gmail.com" size="35"/>
+                <br />
+                <br />
+                <strong>Create a password</strong>
+                <br />
+                <input type="password" name="password" size="35" />
+                <br />
+                <br />
+                <strong>Confirm your password</strong>
+                <br />
+                <input type="password" name="password" size="35" />
+                <br/>
+                <br />
+                <strong>Birthday</strong>
+                <br />
+                <input type="date" name="birthday" />
+                <br />
+                <br />
+                <strong>Gender</strong>
+                <br />
+                <select name="gender" size="1">
+                    <option>I am...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br />
+                <br />
+                <strong>Mobile phone</strong>
+                <br />
+                <input type="text" name="mobile" value="+54" />
+                <br />
+                <br />
+                <strong>Your current email address</strong>
+                <br />
+                <input type="text" name="email" size="35" />
+                <br />
+                <br />
+                <strong>Location</strong>
+                <br />
+                <select name="location" size="1">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Paraguay">Paraguay</option>
+                </select>
+                <br />
+                <br />
+                <button>Next step</button>
+        </form>
+    </body>
+</html>
