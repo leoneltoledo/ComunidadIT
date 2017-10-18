@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Propiedades del form</title>
+    </head>
+    <body>
+        <form action="guardar_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+            <input type="text" id="username" name="username" placeholder="Ingrese Username"/>
+            <input type="text" id="email" name="email" placeholder="Ingrese Email"/>
+            <input type="password" id="pass" name="pass" placeholder="Ingrese Password"/>
+            <input type="submit" name="submit" value="Enviar" />
+        </form>
+        <div id="mensaje"></div>
+        <script>
+            window.onload = function() {
+                let form = document.querySelector('form');
+                let div = document.querySelector('div');
+
+                function validarUsername(username) {
+                    let regexCampoVacio = /^[a-z0-9]+$/i;;
+                    return regexCampoVacio.test(username);
+                };
+
+                function validarMail(mail) {
+                    let regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    return regexMail.test(mail);
+                };
+
+                form.addEventListener('submit', function(evento) {
+                    evento.preventDefault();
+
+                    let user = form.elements[0].value;
+                    let email = form.elements[1].value;
+                    let pass = form.elements[2].value;
+
+                    if (!validarUsername(user) || !validarMail(email) || !validarUsername(pass)) {
+                        div.textContent = 'Por favor ingrese username, email y password validos';
+                    }
+                    else {
+                        div.textContent = 'Usuario Logeado';
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

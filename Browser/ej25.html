@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo ECMAScript Baby!!</title>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                let body = document.querySelector('body');
+                let h1 = document.createElement('h1');
+                let p = document.createElement('p');
+
+                h1.innerText = 'Ahora si, esto es todo dinámico';
+                p.innerText = 'Este documento se crea utilizando sólo ECMAScript';
+
+                body.appendChild(h1);
+                body.appendChild(p);
+            };
+        </script>
+    </body>
+</html>

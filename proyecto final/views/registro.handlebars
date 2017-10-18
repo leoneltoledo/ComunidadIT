@@ -1,0 +1,20 @@
+{{#if message}}
+    <div class="success" style="padding-bottom: 257px;padding-top: 90px;">{{message}}</div>
+{{else}}
+    <div id="login" class="animate form" style="text-align:center;padding-bottom: 152px;padding-top:50px;">
+        <form  action="/registro" method="post"> 
+            <h1>Registro</h1> 
+            <p> 
+                <label for="username" class="uname" data-icon="u"> Nombre de usuario </label>
+                <input id="username" name="username" required="required" id="username" type="text"/>
+            </p>
+            <p> 
+                <label for="password" class="youpasswd" data-icon="p"> Contraseña </label>
+                <input id="password" name="password" required="required" id="password" type="password"/> 
+            </p>
+            <p class="sign in button"> 
+                <input type="submit" value="Enviar" />
+            </p>
+        </form>
+    </div>
+{{/if}}

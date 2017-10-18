@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prductos</title>
+    </head>
+    <body>
+        <ul>
+        <li>Bananas</li>
+        <li>Manzanas</li>
+        <li>Peras</li>
+        <li>Huevos</li>
+        <li>Tomates</li>
+        <li>Lechuga</li>
+        <li>Leche</li>
+        </ul>
+        <script>
+            window.onload = function() {
+                let ul = document.querySelector('ul');
+                let li1 = ul.children[0];
+                let li2 = ul.children[1];
+                let li3 = ul.children[2];
+                let li4 = ul.children[3];
+                let li5 = ul.children[4];
+                let li6 = ul.children[5];
+                let li7 = ul.children[6];
+
+                ul.removeChild(li1);
+                ul.removeChild(li2);
+                ul.removeChild(li3);
+                ul.removeChild(li4);
+                ul.removeChild(li5);
+                ul.removeChild(li6);
+                ul.removeChild(li7);
+            };
+        </Script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let user = prompt('Ingrese usuario');
+            let pass = prompt('Ingrese password');
+            let msj = true;
+            alert(`Bienvenido ${user}`);
+
+            function vali() {
+                msj = confirm('Desea seguir logeado');
+                if(msj) {
+                    alert(`${user} renovamos tu session`);
+                }
+                else {
+                    alert(`${user} ha caducado su sesión por favor vuelva a ingresar`)
+                }
+            }
+            
+            setTimeout(vali, 10000);
+
+        </script>
+    </body>
+</html>

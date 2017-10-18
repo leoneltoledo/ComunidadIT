@@ -1,0 +1,209 @@
+
+body {
+  background: #3E885B;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  border-bottom: 1px solid black;
+  padding-left: 20px;
+  background: #2F4B26;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:first-child {
+  margin-right: 10px;
+}
+
+nav ul li img {
+  vertical-align: middle;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+nav ul li a:hover{
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #5b885b;
+  height: 80px;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+
+footer a {
+  margin: 20px;
+  position: relative;
+  top: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+#tablaliga {
+  border: 1px solid black;
+  height: 600px;
+  width: 300px;
+}
+
+#tablaliga th {
+  border: 1px solid black;
+}
+
+#tablaliga td {
+  border: 1px solid black;
+}
+
+#posicionesfecha {
+  position: absolute;
+  top: 300px;
+  left: 650px;
+  width: 200px;
+}
+
+#tablafecha {
+  border: 1px solid black;
+  height: 400px;
+  width: 200px;
+}
+#tablafecha th {
+  border: 1px solid black;
+}
+
+#tablafecha td {
+  border: 1px solid black;
+}
+
+#posicionesgeneral {
+  position: absolute;
+  top: 300px;
+  left: 950px;
+  width: 200px;
+}
+
+#tablageneral {
+  border: 1px solid black;
+  height: 400px;
+  width: 200px;
+}
+#tablageneral th {
+  border: 1px solid black;
+}
+
+#tablageneral td {
+  border: 1px solid black;
+}
+
+#pronosticos {
+  border: 1px solid black;
+  width: 550px;
+  text-align: center;
+  height: 550px;
+  padding: 40px 10px 100px 10px;
+  background: #C0D7BB;
+}
+
+#tablapronosticos {
+  width: 550px;
+  height: 500px;
+  border-spacing: 5px 5px;
+}
+
+#tablapronosticos th{
+  border-bottom: 3px solid #2F4B26;
+}
+
+#tablapronosticos td{
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px dashed black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+input[type=checkbox] + label {
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+.userNav {
+  position:relative;
+  left: 1000px;
+  color:white;
+  font-size: 20px;
+}
+
+.success {
+  text-align: center;
+  font-size: 30px;
+}

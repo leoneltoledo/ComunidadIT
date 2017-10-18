@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            window.onload = function() {
+                let ul = document.querySelector('ul');
+                let xmlhttp = new XMLHttpRequest();
+                var respuesta;
+
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        respuesta = JSON.parse(xmlhttp.responseText);
+                        var pelicula = respuesta.results;
+                    }
+
+                    for (let i = 0; i < 7; i++) {
+                        let li = document.createElement('li');
+                        let titulo = document.createElement('h1');
+                        let episodio = document.createElement('h2');
+                        let anio = document.createElement('p');                
+
+                        titulo.textContent = `Nombre: ${pelicula[i].title}`;
+                        episodio.textContent = `Episodio: ${pelicula[i].episode_id}`;
+                        anio.textContent = `Año: ${pelicula[i].release_date}`;
+
+                        ul.appendChild(li);
+                        li.appendChild(titulo);
+                        li.appendChild(episodio);
+                        li.appendChild(anio);
+                    }
+                }
+                
+                xmlhttp.open("GET", "https://swapi.co/api/films/", true);
+                xmlhttp.send();
+            };
+        </script>
+    </body>
+</html>

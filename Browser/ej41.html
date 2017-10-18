@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li {
+                cursor: pointer;
+            }
+            .tachado {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                let body = document.querySelector('body');
+                let ul = document.createElement('ul');
+                let tareas = ['tarea1', 'tarea2', 'tarea3', 'tarea4', 'tarea5', 'tarea6', 'tarea7', 'tarea8', 'tarea9', 'tarea10',];
+                
+                tareas.forEach(function(tarea) {
+                    let li = document.createElement('li');
+                    li.textContent = tarea;
+
+                    li.addEventListener('click', function() {
+                        li.classList.toggle('tachado');   
+                    })
+                    /*li.addEventListener('click', function() {
+                        li.classList.remove('tachado');   
+                    })*/
+                    ul.appendChild(li);
+                });
+
+                body.appendChild(ul);
+            };
+        </script>
+    </body>
+</html>

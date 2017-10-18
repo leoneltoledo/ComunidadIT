@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eventos</title>
+    </head>
+    <body>
+        <div></div>
+        <button id="primer-boton">Haceme Click!!</button>
+        <button id="segundo-boton">Sacar handler</button>
+        <a href="http://google.com">Hipervinculo controlado por ECMAScript</a>
+        <script>
+            window.onload = function() {
+                let button = document.querySelector('button');
+                let button2 = document.getElementById('segundo-boton');
+                let hipervinculo = document.querySelector('a');
+                let html = document.querySelector('html');
+                let div = document.querySelector('div');
+
+                div.style.fontSize = '20px';
+                div.style.color = 'red';
+                div.style.fontFamily = 'Arial';
+                div.style.paddingBottom = '20px';
+
+                function saludar() {
+                    alert('Hiciste click en un botón');
+                };
+
+                button.addEventListener('click', saludar);
+
+                button2.addEventListener('click', function() {
+                    button.removeEventListener('click', saludar);
+                });
+
+                hipervinculo.addEventListener('click', function(evento) {
+                    evento.preventDefault();
+                    alert('Este hipervinculo no navega a ningún lado!!!');
+                })
+
+                html.addEventListener('click', function(evento) {
+                    console.log(`x: ${evento.clientX}, y: ${evento.clientY}`);
+                });
+
+                html.addEventListener('keypress', function(evento) {
+                    let valorLetra = String.fromCharCode(evento.charCode)
+                    div.textContent += valorLetra;
+                })
+            }
+        </script>
+    </body>
+</html>

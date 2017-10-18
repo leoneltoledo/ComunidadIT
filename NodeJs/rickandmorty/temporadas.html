@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Productos Por AJAX</h2>
+        <div id="productos">
+            <img src="/img/loading.gif" alt="loading" width="30" />
+        </div>
+        <script>
+            window.onload=function() {
+                const url = 'http://localhost:3000/api/temporadas'
+                const xmlhttp = new XMLHttpRequest();
+                
+                const ocultarLoader = () => {
+                  const loading = document.querySelector('#productos img')
+                  loading.style.display = 'none'
+                }
+
+                const crearListaDeCapitulos = (capitulos) => {
+                  const lista = document.createElement('ol')
+                  const contenedor = document.querySelector('body')
+                
+                  capitulos.forEach((capitulo) => {
+                    const elemento = document.createElement('li')
+                    elemento.textContent = capitulo
+                    lista.appendChild(elemento)
+                })
+
+                contenedor.appendChild(lista)
+                }
+
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    const respuesta = JSON.parse(xmlhttp.responseText);
+                    crearListaDeCapitulos(respuesta.capitulos)
+                    }
+                };
+                
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+        </script>
+    </body>
+</html>

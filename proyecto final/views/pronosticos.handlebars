@@ -1,0 +1,253 @@
+{{#if resultado}}
+    <div class="success"><p>Con tu pronóstico has logrado {{resultado}} puntos.</p></div>
+    <p class="success" style="padding-bottom: 210px;">Espera a la próxima semana para realizar otro pronóstico!</p>
+{{else}}
+{{#if message}}
+    <div class="success" style="padding-top: 50px;padding-bottom: 284px;">{{message}}</div>
+{{else}}
+<section id="pronosticos" style="margin-top: 100px;margin-left: 300px;">
+    <h2 style="font-size: 30px;margin-top: 0px;margin-bottom: 5px;">Fecha 6</h2>
+    <form action="/pronosticos" method="post">
+        <table id="tablapronosticos" style="padding-top:20px;padding-bottom:10px;">
+            <thead>
+                <tr>
+                    <th style="width:245px;"></th>
+                    <th style="width:30px">L</th>
+                    <th style="width:30px">E</th>
+                    <th style="width:30px">V</th>
+                    <th style="width:245px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="/img/{{equipos.5.logo}}">{{equipos.5.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="unoL" id="1L" value="1">
+                        <label for="1L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="unoE" id="1E" value="1">
+                        <label for="1E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="unoV" id="1V" value="1">
+                        <label for="1V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.1.logo}}">{{equipos.1.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.0.logo}}">{{equipos.0.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="dosL" id="2L" value="1">
+                        <label for="2L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="dosE" id="2E" value="1">
+                        <label for="2E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="dosV" id="2V" value="1">
+                        <label for="2V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.14.logo}}">{{equipos.14.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.3.logo}}">{{equipos.3.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="tresL" id="3L" value="1">
+                        <label for="3L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tresE" id="3E" value="1">
+                        <label for="3E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="tresV" id="3V" value="1">
+                        <label for="3V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.17.logo}}">{{equipos.17.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.18.logo}}">{{equipos.18.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="cuatroL" id="4L" value="1">
+                        <label for="4L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="cuatroE" id="4E" value="1">
+                        <label for="4E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="cuatroV" id="4V" value="1">
+                        <label for="4V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.15.logo}}">{{equipos.15.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.8.logo}}">{{equipos.8.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="cincoL" id="5L" value="1">
+                        <label for="5L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="cincoE" id="5E" value="1">
+                        <label for="5E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="cincoV" id="5V" value="1">
+                        <label for="5V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.21.logo}}">{{equipos.21.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.11.logo}}">{{equipos.11.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="seisL" id="6L" value="1">
+                        <label for="6L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="seisE" id="6E" value="1">
+                        <label for="6E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="seisV" id="6V" value="1">
+                        <label for="6V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.23.logo}}">{{equipos.23.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.12.logo}}">{{equipos.12.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="sieteL" id="7L" value="1">
+                        <label for="7L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="sieteE" id="7E" value="1">
+                        <label for="7E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="sieteV" id="7V" value="1">
+                        <label for="7V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.25.logo}}">{{equipos.25.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.24.logo}}">{{equipos.24.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="ochoL" id="8L" value="1">
+                        <label for="8L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ochoE" id="8E" value="1">
+                        <label for="8E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="ochoV" id="8V" value="1">
+                        <label for="8V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.10.logo}}">{{equipos.10.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.22.logo}}">{{equipos.22.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="nueveL" id="9L" value="1">
+                        <label for="9L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="nueveE" id="9E" value="1">
+                        <label for="9E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="nueveV" id="9V" value="1">
+                        <label for="9V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.16.logo}}">{{equipos.16.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.7.logo}}">{{equipos.7.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="diezL" id="10L" value="1">
+                        <label for="10L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="diezE" id="10E" value="1">
+                        <label for="10E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="diezV" id="10V" value="1">
+                        <label for="10V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.2.logo}}">{{equipos.2.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.20.logo}}">{{equipos.20.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="onceL" id="11L" value="1">
+                        <label for="11L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="onceE" id="11E" value="1">
+                        <label for="11E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="onceV" id="11V" value="1">
+                        <label for="11V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.13.logo}}">{{equipos.13.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.4.logo}}">{{equipos.4.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="doceL" id="12L" value="1">
+                        <label for="12L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="doceE" id="12E" value="1">
+                        <label for="12E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="doceV" id="12V" value="1">
+                        <label for="12V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.27.logo}}">{{equipos.27.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.19.logo}}">{{equipos.19.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="treceL" id="13L" value="1">
+                        <label for="13L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="treceE" id="13E" value="1">
+                        <label for="13E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="treceV" id="13V" value="1">
+                        <label for="13V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.6.logo}}">{{equipos.6.nombre}}</td>
+                </tr>
+                <tr>
+                    <td><img src="/img/{{equipos.26.logo}}">{{equipos.26.nombre}}</td>
+                    <td>
+                        <input type="checkbox" name="catorceL" id="14L" value="1">
+                        <label for="14L"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="catorceE" id="14E" value="1">
+                        <label for="14E"></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="catorceV" id="14V" value="1">
+                        <label for="14V"></label>
+                    </td>
+                    <td><img src="/img/{{equipos.9.logo}}">{{equipos.9.nombre}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit">
+    </form>
+    </section>
+<p style="position: absolute;top: 120px;right: 350px;font-size: 25px;">Ingrese sus pronósticos y espere a que finalice la fecha!</p>
+{{/if}}
+{{/if}}

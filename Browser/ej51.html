@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                let body = document.querySelector('body');
+                let respuesta = '{"title": "A New Hope", "episode_id": 4, "species": ["https://swapi.co/api/species/5/", "https://swapi.co/api/species/3/", "https://swapi.co/api/species/2/", "https://swapi.co/api/species/1/", "https://swapi.co/api/species/4/"]}';
+                respuestaJSON = JSON.parse(respuesta);
+
+                console.log(respuestaJSON.title);
+                console.log(respuestaJSON.episode_id);
+
+                for (let i = 0;i < 5; i++) {
+                    let div = document.createElement('div');
+                    div.innerHTML = `<a href="${respuestaJSON.species[i]}">${respuestaJSON.species[i]}</a></br>`;
+                    body.appendChild(div);
+                };
+            };
+        </script>
+    </body>
+</html>

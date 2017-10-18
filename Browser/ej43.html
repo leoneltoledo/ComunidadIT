@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Propiedades del form</title>
+    </head>
+    <body>
+        <form action="guardar_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+            <input type="text" id="username" name="username" />
+            <input type="password" id="pass" name="pass" />
+            <input type="submit" name="submit" value="Enviar" />
+        </form>
+        <script>
+            window.onload = function() {
+                let form = document.querySelector('form');
+                let action = form.action;
+                let method = form.method;
+                let enctype = form.enctype;
+                let name = form.name;
+                let ul = document.createElement('ul');
+                let body = document.querySelector('body');
+                body.appendChild(ul);
+
+                for(let i = 0; i < 4; i++) {
+                    let li = document.createElement('li');
+                    ul.appendChild(li);
+                }
+
+                ul.children[0].textContent = `Action: ${action}`;
+                ul.children[1].textContent = `Method: ${method}`;
+                ul.children[2].textContent = `Enctype: ${enctype}`;
+                ul.children[3].textContent = `Name: ${name}`;
+
+
+            }
+        </script>
+    </body>
+</html>

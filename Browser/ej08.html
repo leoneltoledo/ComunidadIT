@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let acum = 0;
+            let cont = 0;
+            alert("Vamos a sumar todos los numeros que Ud. ingrese");
+            let asd = confirm("Desea ingresar un numero?");
+            while (asd == true) {
+                numero = parseInt(prompt("Ingrese numero"));
+                console.log(numero);
+                acum += numero;
+                asd = confirm("Desea ingresar otro numero?")
+                cont ++;
+            }
+            console.log("La suma de los numeros es: " + acum);
+            console.log("El promedio es: " + acum / cont);
+        </script>
+    </body>
+</html>

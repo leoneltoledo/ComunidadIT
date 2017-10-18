@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("Ingrese la cantidad de segundos que quiera estar en la pagina"));
+            let cont = 0;
+            function conteo() {
+                cont++;
+                console.log(cont);
+                if (cont == num) {
+                    alert('ha caducado su sesión por favor vuelva a ingresar');
+                }
+            }
+            setInterval(conteo, 1000);
+        </script>
+    </body>
+</html>

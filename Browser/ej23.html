@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Textos</title>
+    </head>
+        <body>
+        <h1>Titulo</h1>
+        <p>Parrafo</p>
+        <ul></ul>
+        <script>
+            window.onload = function() {
+                let ul = document.querySelector('ul');
+                ul.innerHTML = '<li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li>';
+
+                console.log(ul.innerHTML);
+                console.log(ul.children);
+            };
+        </script>
+    </body>
+</html>

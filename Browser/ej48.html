@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Propiedades del form</title>
+    </head>
+    <body>
+        <form action="guardar_usuario.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+            <input type="text" id="username" name="username" />
+            <input type="password" id="pass" name="pass" />
+            <input type="submit" name="submit" value="Enviar" />
+        </form>
+        <script>
+            window.onload = function() {
+                let form = document.querySelector('form');
+                let user = form[0];
+                let pass = form[1];
+
+                user.addEventListener('focus', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+                pass.addEventListener('focus', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+
+                user.addEventListener('blur', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+                pass.addEventListener('blur', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+
+                user.addEventListener('input', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+                pass.addEventListener('input', function() {
+                    console.log(`User: ${user.value} y Pass: ${pass.value}`);
+                });
+            }
+        </script>
+    </body>
+</html>

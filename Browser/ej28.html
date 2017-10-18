@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo ECMAScript Baby!!</title>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                let body = document.querySelector('body');
+                let ul = document.createElement('ul');
+                let confirmacion = confirm('Quiere ingresar un nombre?');
+                let cont = 0;
+
+                while (confirmacion) {
+                    let nombre = prompt('Ingrese nombre');
+                    let li = document.createElement('li');
+                    li.innerText = nombre;
+
+                    if (cont % 2 == 0) {
+                        li.style.color = 'green';
+                    }
+                    else {
+                        li.style.color = 'red';
+                    }
+                    ul.appendChild(li);
+                    cont++;
+                    confirmacion = confirm('Desea ingresar otro nombre?');
+                }
+                body.appendChild(ul);
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TheProde</title>
+        <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/"><img src="img/logo.png" alt="logo"></a>
+                </li>
+                {{#if user}}
+                <li style="position:relative;left:200px">
+                    <a href="/pronosticos">Tus Pronósticos</a>
+                </li>
+                <li>
+                    <p class="userNav">{{user}}</p>
+                </li>
+                {{else}}
+                <li style="position:relative;left:960px">
+                    <a href="/registro">Registro</a>
+                </li>
+                <li style="position:relative;left:980px">
+                    <p style="color:white">/</p>
+                </li>
+                <li style="position:relative;left:1000px">
+                    <a href="/login">Login</a>
+                </li>
+                {{/if}}
+            </ul>
+        </nav>
+        <section style="padding: 50px 100px 100px 100px;">
+            {{{body}}}
+        </section>
+        <footer>
+            <a href="/contacto">Contacto</a>
+            <a href="/recomendaramigo">Recomendar a un amigo</a>
+            <a href="/info">Quiénes somos?</a>
+            <p style="font-size: 13px;">Prode Argentino 2017</p>
+        </footer>
+    </body>
+</html>
